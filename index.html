@@ -969,7 +969,7 @@
         <div class="screen active" id="screen-welcome">
             <div style="text-align: center; margin-bottom: 30px;">
                 <h1 style="font-size: 3rem; margin-bottom: 10px; color: var(--navy); line-height: 1.1;"
-                    data-i18n="title">🇮🇳 The Great Indian Election Journey</h1>
+                    data-i18n="title">🗳️ VoteSmart: The Educational Voting Game</h1>
                 <p style="font-size: 1.2rem; color: var(--text-gray); font-weight: bold;" data-i18n="subtitle">
                     Experience the world's largest democracy! 🎉</p>
             </div>
@@ -1307,13 +1307,13 @@
 
     <script>
         // --- ENVIRONMENT VARIABLES (Remove before GitHub upload!) ---
-        const ENV_API_KEY = "AIzaSyDYOrC04f3xsdH6BxK1FX_Gk0IH4v2M_OQ"; // Paste your Gemini API key here for testing/recording
+        const ENV_API_KEY = ""; // Key removed for security. Users will input their own key in the browser.
         // -----------------------------------------------------------
 
         // --- TRANSLATION DICTIONARY ---
         const translations = {
             "en": {
-                "title": "🇮🇳 The Great Indian Election Journey",
+                "title": "🗳️ VoteSmart: The Educational Voting Game",
                 "subtitle": "Experience the world's largest democracy! 🎉",
                 "welcome_1": "Hello! Every 5 years, over 90 crore (900 million) people get to choose their government.",
                 "welcome_2": "Today, you'll step into the shoes of a newly eligible 18-year-old voter. Are you ready for the adventure?",
@@ -1721,7 +1721,7 @@
         }
 
         // --- ASSISTANT LOGIC ---
-        let apiKey = ENV_API_KEY || localStorage.getItem('gemini_key') || '';
+        let apiKey = (typeof ENV_API_KEY !== 'undefined' ? ENV_API_KEY : '') || localStorage.getItem('gemini_key') || '';
         let simulateMode = false;
         const chatWidget = document.getElementById('assistant-chat');
         const overlay = document.getElementById('config-overlay');

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indian Election Journey & Assistant</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;700;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;700;900&family=Great+Vibes&display=swap"
         rel="stylesheet">
     <!-- Highlight.js for potential code snippets in chat -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -644,19 +644,18 @@
 
         .cert-title {
             font-size: 2.2rem;
-            color: var(--saffron);
+            color: #000;
             font-family: 'Baloo 2', cursive;
             margin-bottom: 10px;
+            font-weight: 800;
         }
 
         .cert-name {
-            font-size: 3rem;
-            color: var(--navy);
+            font-size: 3.2rem;
+            color: #000;
             font-family: 'Baloo 2', cursive;
             margin: 15px 0;
-            background: linear-gradient(90deg, var(--saffron), var(--green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-weight: 800;
             display: inline-block;
             border-bottom: 4px solid var(--navy);
         }
@@ -857,9 +856,25 @@
             align-self: flex-end;
         }
 
+        .quick-reply-btn {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--navy);
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+        }
+
+        .quick-reply-btn:hover {
+            background: #e2e8f0;
+        }
+
         .chat-input {
             display: flex;
-            border-top: 1px solid #e2e8f0;
             padding: 10px;
             background: white;
         }
@@ -1018,16 +1033,49 @@
                     </div>
                     <div class="input-group" style="text-align: left;">
                         <label data-i18n="label_age">Age</label>
-                        <input type="number" id="form6-age" value="18" min="18" max="120">
+                        <input type="number" id="form6-age" value="18" min="18" max="115">
                     </div>
                     <div class="input-group" style="text-align: left;">
                         <label data-i18n="label_state">State</label>
                         <select id="form6-state">
                             <option value="" data-i18n="opt_select">Select State...</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman
+                                and Diu</option>
                             <option value="Delhi">Delhi</option>
-                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
                             <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Ladakh">Ladakh</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Puducherry">Puducherry</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
                             <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
                         </select>
                     </div>
                     <button class="btn" id="btn-submit-form6" onclick="submitForm6()" style="margin-top: 10px;"
@@ -1036,7 +1084,7 @@
 
                 <div id="voter-id-card" class="popup-card">
                     <div style="font-weight: bold; text-align: center; color: var(--navy); margin-bottom: 15px; font-family: 'Baloo 2', cursive;"
-                        data-i18n="epic_header">🇮🇳 ELECTION COMMISSION OF INDIA</div>
+                        data-i18n="epic_header">ELECTION COMMISSION</div>
                     <div style="display: grid; grid-template-columns: 100px 1fr; gap: 15px;">
                         <div class="epic-photo">😎</div>
                         <div>
@@ -1241,7 +1289,24 @@
                 <div class="cert-name p-name"></div>
                 <div style="margin: 15px 0; font-size: 1.1rem; color: var(--text-gray); font-weight: bold;"
                     data-i18n="cert_reason">for mastering the election process of India!</div>
-                <div style="font-size: 4rem; margin-top: 10px;">🇮🇳</div>
+                <div style="font-size: 4rem; margin-top: 10px; margin-bottom: 20px;">🇮🇳</div>
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-end; padding: 0 20px; margin-top: 10px; border-top: 1px solid #e2e8f0; padding-top: 15px;">
+                    <div style="text-align: left;">
+                        <span
+                            style="font-size: 0.8rem; color: var(--text-gray); display: block; margin-bottom: 5px;">Organized
+                            by</span>
+                        <strong
+                            style="color: var(--navy); font-size: 1.1rem; font-family: 'Baloo 2', cursive;">Hack2Skill</strong>
+                    </div>
+                    <div style="text-align: right;">
+                        <span
+                            style="font-size: 0.8rem; color: var(--text-gray); display: block; margin-bottom: 5px;">Powered
+                            by</span>
+                        <strong style="color: var(--saffron); font-size: 1.1rem; font-family: 'Baloo 2', cursive;">🚀
+                            Antigravity</strong>
+                    </div>
+                </div>
             </div>
 
             <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
@@ -1262,8 +1327,13 @@
             <div class="chat-header">
                 <span data-i18n="bot_title">🤖 Voting Assistant <span style='font-size:0.6em; font-weight:normal;'>by
                         shubh</span></span>
-                <button style="background:none; border:none; color:white; font-size:1.2rem; cursor:pointer;"
-                    onclick="toggleChat()">✖</button>
+                <div>
+                    <button
+                        style="background:none; border:none; color:white; font-size:1.2rem; cursor:pointer; margin-right: 15px;"
+                        onclick="resetChat()" title="Reset Chat">🔄</button>
+                    <button style="background:none; border:none; color:white; font-size:1.2rem; cursor:pointer;"
+                        onclick="toggleChat()">✖</button>
+                </div>
             </div>
 
             <div id="config-overlay">
@@ -1286,6 +1356,13 @@
             <div class="chat-body" id="chat-body">
                 <div class="chat-msg msg-bot" data-i18n="bot_hello">Hi! I am your Voting Assistant. Ask me anything
                     about how voting works in India!</div>
+            </div>
+            <div id="quick-replies"
+                style="display: flex; gap: 8px; padding: 10px; overflow-x: auto; background: white; border-top: 1px solid #e2e8f0; white-space: nowrap; scrollbar-width: none;">
+                <button class="quick-reply-btn" onclick="sendPresetMessage('What is a vote?')">What is a vote?</button>
+                <button class="quick-reply-btn" onclick="sendPresetMessage('Process of voting in India')">Process of
+                    voting</button>
+                <button class="quick-reply-btn" onclick="sendPresetMessage('What is EVM?')">What is EVM?</button>
             </div>
             <div class="chat-input">
                 <input type="text" id="chat-input-text" placeholder="Type a question..."
@@ -1332,7 +1409,7 @@
                 "label_state": "State",
                 "opt_select": "Select State...",
                 "btn_print": "Print My Voter ID 🖨️",
-                "epic_header": "🇮🇳 ELECTION COMMISSION OF INDIA",
+                "epic_header": "VOTER ID - ELECTION COMMISSION",
                 "epic_no": "EPIC No:",
                 "epic_name": "Name:",
                 "epic_age": "Age:",
@@ -1383,9 +1460,9 @@
                 "stage5_p1": "Wow,",
                 "stage5_p2": "You successfully mastered the Indian General Election process.",
                 "stage5_p3": "Every single vote is a superpower. Use it wisely when your time comes!",
-                "cert_title": "CERTIFICATE OF DEMOCRACY",
-                "cert_awarded": "Proudly awarded to",
-                "cert_reason": "for mastering the election process of India!",
+                "cert_title": "Hack2Skill Voting Champion",
+                "cert_awarded": "Proudly presented to the smart kid:",
+                "cert_reason": "for successfully learning how the Indian Election works! 🏆",
                 "btn_play_again": "Play Again 🔄",
                 "bot_title": "🤖 Voting Assistant <span style='font-size:0.6em; font-weight:normal;'>by shubh</span>",
                 "bot_setup": "Buddy Setup",
@@ -1414,7 +1491,7 @@
                 "label_state": "राज्य",
                 "opt_select": "राज्य चुनें...",
                 "btn_print": "मेरा वोटर आईडी प्रिंट करें 🖨️",
-                "epic_header": "🇮🇳 भारत निर्वाचन आयोग",
+                "epic_header": "वोटर आईडी - निर्वाचन आयोग",
                 "epic_no": "EPIC नंबर:",
                 "epic_name": "नाम:",
                 "epic_age": "उम्र:",
@@ -1465,9 +1542,9 @@
                 "stage5_p1": "वाह,",
                 "stage5_p2": "आपने भारतीय चुनाव प्रक्रिया को सफलतापूर्वक समझ लिया है।",
                 "stage5_p3": "हर एक वोट एक महाशक्ति है। समय आने पर इसका समझदारी से उपयोग करें!",
-                "cert_title": "लोकतंत्र का प्रमाणपत्र",
-                "cert_awarded": "गर्व के साथ प्रदान किया गया:",
-                "cert_reason": "भारत की चुनाव प्रक्रिया में महारत हासिल करने के लिए!",
+                "cert_title": "Hack2Skill वोटिंग चैंपियन",
+                "cert_awarded": "गर्व के साथ प्रस्तुत किया गया:",
+                "cert_reason": "भारतीय चुनाव कैसे काम करता है, यह सफलतापूर्वक सीखने के लिए! 🏆",
                 "btn_play_again": "फिर से खेलें 🔄",
                 "bot_title": "🤖 मतदान सहायक <span style='font-size:0.6em; font-weight:normal;'>by shubh</span>",
                 "bot_setup": "मित्र सेटअप",
@@ -1808,6 +1885,17 @@
 
         function handleChatEnter(e) {
             if (e.key === 'Enter') sendChatMessage();
+        }
+
+        function resetChat() {
+            const body = document.getElementById('chat-body');
+            body.innerHTML = `<div class="chat-msg msg-bot" data-i18n="bot_hello">${translations[currentLang]["bot_hello"]}</div>`;
+        }
+
+        function sendPresetMessage(text) {
+            const input = document.getElementById('chat-input-text');
+            input.value = text;
+            sendChatMessage();
         }
 
         // --- CONFETTI ---
